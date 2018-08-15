@@ -1,0 +1,24 @@
+﻿
+@{
+	ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp</h2>
+
+<fieldset>
+	<legend> Personal Information</legend>
+	<form action="/Home/AddUser" style="margin:auto;" method="post">
+		<label class="control-label">First Name</label><input type="text" name="FirstName" class="form-control" pattern="^[a-zA-z]{2,30}$" placeholder="First Name" title="Please insert your First Name" required /><br />
+
+		<label class="control-label">Last Name</label><input type="text" name="LastName" class="form-control" pattern="^[a-zA-Z]{2, 30}$" placeholder="Last Name" title="Please insert your Last Name" required/><br />
+
+		<label class="control-label">Phone</label><input type="tel" name="PhoneNumber" class="form-control" placeholder="xxx-xxx-xxxx" title="Phone Number format: xxx-xxx-xxxx" required/><br />
+
+		<label class="control-label">Email</label><input type="email" name="Email" class="form-control" placeholder="EmailAddress@email.com" title="Please insert a valid email" required/><br />
+		<input type="submit"  value="Sign Up  class="btn" /><br /><br />
+	</form><br />
+</fieldset>
+
+
+
+

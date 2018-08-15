@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using DailyLab21.Models;
+using System.Web.Mvc;
+
 
 namespace DailyLab21.Controllers
 {
@@ -23,15 +25,29 @@ namespace DailyLab21.Controllers
             return View();
         }
 
-        public ActionResult Registration()
+        public ActionResult SignUp()
         {
             return View();
         }
 
-        public ActionResult RegisterForm()
+        public ActionResult AddUser(UserInfo newUser)
         {
-            return View();
-        }
+            //*To Do*: Validation
+            if (ModelState.IsValid)
+            {
+                //*To Do*: Send the data to the DB
 
+                //*To DO*: Confirmation or send to Index Page
+                ViewBag.confirmation = "Thank you for signing up " + newUser.FirstName;
+
+                return View("Confirmation");
+            }
+            else
+            {
+                return View("Error");
+
+            }
+
+        }
     }
 }
