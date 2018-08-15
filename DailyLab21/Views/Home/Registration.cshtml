@@ -1,0 +1,20 @@
+﻿
+@{
+	ViewBag.Title = "Registration";
+}
+
+<h2>Please complete the form to register!</h2>
+
+<form action="/Home/RegisterForm" method="post">
+	<fieldset>
+		<legend>New User Information</legend>
+		<p id="FirstName">First Name: <input type="text" maxlength="25" /></p><br />
+		<p id="LastName">Last Name: <input type="text" maxlength="25" /></p><br />
+		<p id="Email">Email: <input type="email" maxlength="25" /></p><br />
+		<p id="PhoneNumber">Phone Number: <input type="tel" maxlength="10" /></p><br />
+		<p id="Password">Password: <input type="password" maxlength="25" /></p><br />
+	</fieldset>
+
+	<input type="submit" value="Register Me" />
+</form>
+
